@@ -1,0 +1,23 @@
+{
+  "name": "Java-Skills-Test-Connor-Frendt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connorfrendt/Java-Skills-Test-Connor-Frendt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connorfrendt/Java-Skills-Test-Connor-Frendt/issues"
+  },
+  "homepage": "https://github.com/connorfrendt/Java-Skills-Test-Connor-Frendt#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2"
+  }
+}
