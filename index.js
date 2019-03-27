@@ -67,8 +67,14 @@ const menu = () => {
   
           money.totalMoney -= 1.8;
   
+          console.log('\n', '>>> You have $', money.totalMoney.toFixed(2), 'left to use! <<<', '\n');
           console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES!');
-          console.log('You have $', money.totalMoney.toFixed(2), 'left to use!');
+          console.log('You have', ingredients.banana.count, 'grams of BANANAS!');
+          console.log('You have', ingredients.mango.count, 'grams of MANGOS!');
+          console.log('You have', ingredients.condensedMilk.count, 'mL of CONDENSED MILK!');
+          console.log('You have', ingredients.ice.count, 'mL of ICE!');
+          console.log('You have', ingredients.sugar.count, 'grams of SUGAR!');
+          console.log('\n');
         }
       }
 
