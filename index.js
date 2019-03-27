@@ -89,6 +89,7 @@ const menu = () => {
         console.log('TOTAL COST: ', money.totalCost.toFixed(2));
 
         if(money.totalRevenue > Math.abs(money.totalCost)) {
+
           var totalProfit = money.totalRevenue - Math.abs(money.totalCost);
           console.log('TOTAL PROFIT: ', totalProfit.toFixed(2));
           console.log('You have made $', totalProfit.toFixed(2), 'in profit today')
@@ -101,6 +102,7 @@ const menu = () => {
         }
         
         else {
+          console.log('TOTAL PROFIT: ', (money.totalRevenue - Math.abs(money.totalCost)).toFixed(2));
           console.log('You have not made any revenue, nor had any costs, therefore you do not have a profit for today.');
         }
       }
