@@ -1,5 +1,6 @@
 const ingredients = require('./ingredients.js');
 const inquirer = require('inquirer');
+const money = require('./money.js');
 
 const menu = () => {
 
@@ -11,6 +12,9 @@ const menu = () => {
       choices: [
       {
         name: 'Check Inventory'
+      },
+      {
+        name: 'Restock Inventory'
       },
       {
         name: 'Make a Strawberry Smoothie!'
@@ -38,7 +42,7 @@ const menu = () => {
       if(selection === 'Check Inventory') {
         console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
-          console.log('You have', ingredients.strawberry, 'grams of STRAWBERRIES!');
+          console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES!');
           console.log('You have', ingredients.banana, 'grams of BANANAS!');
           console.log('You have', ingredients.mango, 'grams of MANGOS!');
           console.log('You have', ingredients.condensedMilk, 'mL of CONDENSED MILK!');
@@ -47,21 +51,26 @@ const menu = () => {
           console.log('\n');
       }
 
+      if(selection === 'Restock Inventory') {
+        ingredients.strawberry.count += 250;
+        console.log('You have $', money.totalMoney, 'left to use!');
+      }
+
       if(selection === 'Make a Strawberry Smoothie!') {
 
-        if(ingredients.strawberry < 150 || ingredients.condensedMilk < 60 || ingredients.ice < 90 || ingredients.sugar < 24) {
+        if(ingredients.strawberry.count < 150 || ingredients.condensedMilk < 60 || ingredients.ice < 90 || ingredients.sugar < 24) {
           console.log('Sale denied.  Not enough ingredients to make smoothie.');
         }
         
         else {
-          ingredients.strawberry -= 150;
+          ingredients.strawberry.count -= 150;
           ingredients.condensedMilk -= 60;
           ingredients.ice -= 90;
           ingredients.sugar -= 24;
       
           console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
-          console.log('You have', ingredients.strawberry, 'grams of STRAWBERRIES left!');
+          console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES left!');
           console.log('You have', ingredients.banana, 'grams of BANANAS left!');
           console.log('You have', ingredients.mango, 'grams of MANGOS left!');
           console.log('You have', ingredients.condensedMilk, 'mL of CONDENSED MILK left!');
