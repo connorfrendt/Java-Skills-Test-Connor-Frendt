@@ -25,7 +25,7 @@ const ingredients = {
     buyCost: 0.3
   },
   sugar: {
-    count: 200,
+    count: 500,
     makeCost: 0.5,
     buyCost: 0.3
   }

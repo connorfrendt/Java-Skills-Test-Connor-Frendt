@@ -52,10 +52,24 @@ const menu = () => {
       }
 
       if(selection === 'Restock Inventory') {
-        ingredients.strawberry.count += 250;
-        // ingredients.banana
-        console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES!');
-        console.log('You have $', money.totalMoney, 'left to use!');
+
+        if(money.totalMoney < 1.80) {
+          console.log('RESTOCK FAILED.  Not enough funds.');
+        }
+
+        else {
+          ingredients.strawberry.count += 150;
+          ingredients.banana.count += 180;
+          ingredients.mango.count += 210;
+          ingredients.condensedMilk.count += 60;
+          ingredients.ice.count += 90;
+          ingredients.sugar.count += 24;
+  
+          money.totalMoney -= 1.8;
+  
+          console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES!');
+          console.log('You have $', money.totalMoney.toFixed(2), 'left to use!');
+        }
       }
 
       if(selection === 'Make a Strawberry Smoothie!') {
@@ -70,8 +84,11 @@ const menu = () => {
           ingredients.ice.count -= 90;
           ingredients.sugar.count -= 24;
       
+          money.totalMoney += 3;
+          
           console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
+          console.log('\n', 'You now have $', money.totalMoney.toFixed(2), '\n');
           console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES left!');
           console.log('You have', ingredients.banana.count, 'grams of BANANAS left!');
           console.log('You have', ingredients.mango.count, 'grams of MANGOS left!');
