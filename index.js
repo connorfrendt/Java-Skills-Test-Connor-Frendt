@@ -43,39 +43,41 @@ const menu = () => {
         console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
           console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES!');
-          console.log('You have', ingredients.banana, 'grams of BANANAS!');
-          console.log('You have', ingredients.mango, 'grams of MANGOS!');
-          console.log('You have', ingredients.condensedMilk, 'mL of CONDENSED MILK!');
-          console.log('You have', ingredients.ice, 'mL of ICE!');
-          console.log('You have', ingredients.sugar, 'grams of SUGAR!');
+          console.log('You have', ingredients.banana.count, 'grams of BANANAS!');
+          console.log('You have', ingredients.mango.count, 'grams of MANGOS!');
+          console.log('You have', ingredients.condensedMilk.count, 'mL of CONDENSED MILK!');
+          console.log('You have', ingredients.ice.count, 'mL of ICE!');
+          console.log('You have', ingredients.sugar.count, 'grams of SUGAR!');
           console.log('\n');
       }
 
       if(selection === 'Restock Inventory') {
         ingredients.strawberry.count += 250;
+        // ingredients.banana
+        console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES!');
         console.log('You have $', money.totalMoney, 'left to use!');
       }
 
       if(selection === 'Make a Strawberry Smoothie!') {
 
-        if(ingredients.strawberry.count < 150 || ingredients.condensedMilk < 60 || ingredients.ice < 90 || ingredients.sugar < 24) {
+        if(ingredients.strawberry.count < 150 || ingredients.condensedMilk.count < 60 || ingredients.ice.count < 90 || ingredients.sugar.count < 24) {
           console.log('Sale denied.  Not enough ingredients to make smoothie.');
         }
         
         else {
           ingredients.strawberry.count -= 150;
-          ingredients.condensedMilk -= 60;
-          ingredients.ice -= 90;
-          ingredients.sugar -= 24;
+          ingredients.condensedMilk.count -= 60;
+          ingredients.ice.count -= 90;
+          ingredients.sugar.count -= 24;
       
           console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
           console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES left!');
-          console.log('You have', ingredients.banana, 'grams of BANANAS left!');
-          console.log('You have', ingredients.mango, 'grams of MANGOS left!');
-          console.log('You have', ingredients.condensedMilk, 'mL of CONDENSED MILK left!');
-          console.log('You have', ingredients.ice, 'mL of ICE left!');
-          console.log('You have', ingredients.sugar, 'grams of SUGAR left!');
+          console.log('You have', ingredients.banana.count, 'grams of BANANAS left!');
+          console.log('You have', ingredients.mango.count, 'grams of MANGOS left!');
+          console.log('You have', ingredients.condensedMilk.count, 'mL of CONDENSED MILK left!');
+          console.log('You have', ingredients.ice.count, 'mL of ICE left!');
+          console.log('You have', ingredients.sugar.count, 'grams of SUGAR left!');
           console.log('\n');
       
         }
@@ -83,24 +85,24 @@ const menu = () => {
 
       if(selection === 'Make a Banana Smoothie!') {
 
-        if(ingredients.banana < 180 || ingredients.condensedMilk < 60 || ingredients.ice < 90 || ingredients.sugar < 24) {
+        if(ingredients.banana.count < 180 || ingredients.condensedMilk.count < 60 || ingredients.ice.count < 90 || ingredients.sugar.count < 24) {
           console.log('Sale denied.  Not enough ingredients to make smoothie.');
         }
 
         else {
-          ingredients.banana -= 180;
-          ingredients.condensedMilk -= 60;
-          ingredients.ice -= 90;
-          ingredients.sugar -= 24;
+          ingredients.banana.count -= 180;
+          ingredients.condensedMilk.count -= 60;
+          ingredients.ice.count -= 90;
+          ingredients.sugar.count -= 24;
       
           console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
-          console.log('You have', ingredients.strawberry, 'grams of STRAWBERRIES left!');
-          console.log('You have', ingredients.banana, 'grams of BANANAS left!');
-          console.log('You have', ingredients.mango, 'grams of MANGOS left!');
-          console.log('You have', ingredients.condensedMilk, 'mL of CONDENSED MILK left!');
-          console.log('You have', ingredients.ice, 'mL of ICE left!');
-          console.log('You have', ingredients.sugar, 'grams of SUGAR left!');
+          console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES left!');
+          console.log('You have', ingredients.banana.count, 'grams of BANANAS left!');
+          console.log('You have', ingredients.mango.count, 'grams of MANGOS left!');
+          console.log('You have', ingredients.condensedMilk.count, 'mL of CONDENSED MILK left!');
+          console.log('You have', ingredients.ice.count, 'mL of ICE left!');
+          console.log('You have', ingredients.sugar.count, 'grams of SUGAR left!');
           console.log('\n');
       
         }
@@ -108,24 +110,24 @@ const menu = () => {
 
       if(selection === 'Make a Mango Smoothie!') {
 
-        if(ingredients.mango < 210 || ingredients.condensedMilk < 60 || ingredients.ice < 90 || ingredients.sugar < 24) {
+        if(ingredients.mango.count < 210 || ingredients.condensedMilk.count < 60 || ingredients.ice.count < 90 || ingredients.sugar.count < 24) {
           console.log('Sale denied.  Not enough ingredients to make smoothie.');
         }
         
         else {
-          ingredients.mango -= 210;
-          ingredients.condensedMilk -= 60;
-          ingredients.ice -= 90;
-          ingredients.sugar -= 24;
+          ingredients.mango.count -= 210;
+          ingredients.condensedMilk.count -= 60;
+          ingredients.ice.count -= 90;
+          ingredients.sugar.count -= 24;
       
           console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
-          console.log('You have', ingredients.strawberry, 'grams of STRAWBERRIES left!');
-          console.log('You have', ingredients.banana, 'grams of BANANAS left!');
-          console.log('You have', ingredients.mango, 'grams of MANGOS left!');
-          console.log('You have', ingredients.condensedMilk, 'mL of CONDENSED MILK left!');
-          console.log('You have', ingredients.ice, 'mL of ICE left!');
-          console.log('You have', ingredients.sugar, 'grams of SUGAR left!');
+          console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES left!');
+          console.log('You have', ingredients.banana.count, 'grams of BANANAS left!');
+          console.log('You have', ingredients.mango.count, 'grams of MANGOS left!');
+          console.log('You have', ingredients.condensedMilk.count, 'mL of CONDENSED MILK left!');
+          console.log('You have', ingredients.ice.count, 'mL of ICE left!');
+          console.log('You have', ingredients.sugar.count, 'grams of SUGAR left!');
           console.log('\n');
       
         }
@@ -133,75 +135,75 @@ const menu = () => {
 
       if(selection === 'Make a Strawberry-Banana Smoothie!') {
 
-        if(ingredients.strawberry < 75 || ingredients.banana < 90 || ingredients.condensedMilk < 60 || ingredients.ice < 90 || ingredients.sugar < 24) {
+        if(ingredients.strawberry.count < 75 || ingredients.banana.count < 90 || ingredients.condensedMilk.count < 60 || ingredients.ice.count < 90 || ingredients.sugar.count < 24) {
           console.log('Sale denied.  Not enough ingredients to make smoothie.');
         }
 
         else {
-          ingredients.strawberry -= 75;
-          ingredients.banana -= 90;
-          ingredients.condensedMilk -= 60;
-          ingredients.ice -= 90;
-          ingredients.sugar -= 24;
+          ingredients.strawberry.count -= 75;
+          ingredients.banana.count -= 90;
+          ingredients.condensedMilk.count -= 60;
+          ingredients.ice.count -= 90;
+          ingredients.sugar.count -= 24;
       
           console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
-          console.log('You have', ingredients.strawberry, 'grams of STRAWBERRIES left!');
-          console.log('You have', ingredients.banana, 'grams of BANANAS left!');
-          console.log('You have', ingredients.mango, 'grams of MANGOS left!');
-          console.log('You have', ingredients.condensedMilk, 'mL of CONDENSED MILK left!');
-          console.log('You have', ingredients.ice, 'mL of ICE left!');
-          console.log('You have', ingredients.sugar, 'grams of SUGAR left!');
+          console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES left!');
+          console.log('You have', ingredients.banana.count, 'grams of BANANAS left!');
+          console.log('You have', ingredients.mango.count, 'grams of MANGOS left!');
+          console.log('You have', ingredients.condensedMilk.count, 'mL of CONDENSED MILK left!');
+          console.log('You have', ingredients.ice.count, 'mL of ICE left!');
+          console.log('You have', ingredients.sugar.count, 'grams of SUGAR left!');
           console.log('\n');
         }
       }
 
       if(selection === 'Make a Strawberry-Mango Smoothie!') {
 
-        if(ingredients.strawberry < 75 || ingredients.mango < 105 || ingredients.condensedMilk < 60 || ingredients.ice < 90 || ingredients.sugar < 24) {
+        if(ingredients.strawberry.count < 75 || ingredients.mango.count < 105 || ingredients.condensedMilk.count < 60 || ingredients.ice.count < 90 || ingredients.sugar.count < 24) {
           console.log('Sale denied.  Not enough ingredients to make smoothie.');
         }
 
         else {
-          ingredients.strawberry -= 75;
-          ingredients.mango -= 105;
-          ingredients.condensedMilk -= 60;
-          ingredients.ice -= 90;
-          ingredients.sugar -= 24;
+          ingredients.strawberry.count -= 75;
+          ingredients.mango.count -= 105;
+          ingredients.condensedMilk.count -= 60;
+          ingredients.ice.count -= 90;
+          ingredients.sugar.count -= 24;
       
           console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
-          console.log('You have', ingredients.strawberry, 'grams of STRAWBERRIES left!');
-          console.log('You have', ingredients.banana, 'grams of BANANAS left!');
-          console.log('You have', ingredients.mango, 'grams of MANGOS left!');
-          console.log('You have', ingredients.condensedMilk, 'mL of CONDENSED MILK left!');
-          console.log('You have', ingredients.ice, 'mL of ICE left!');
-          console.log('You have', ingredients.sugar, 'grams of SUGAR left!');
+          console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES left!');
+          console.log('You have', ingredients.banana.count, 'grams of BANANAS left!');
+          console.log('You have', ingredients.mango.count, 'grams of MANGOS left!');
+          console.log('You have', ingredients.condensedMilk.count, 'mL of CONDENSED MILK left!');
+          console.log('You have', ingredients.ice.count, 'mL of ICE left!');
+          console.log('You have', ingredients.sugar.count, 'grams of SUGAR left!');
           console.log('\n');
         }
       }
 
       if(selection === 'Make a Banana-Mango Smoothie!') {
 
-        if(ingredients.banana < 90 || ingredients.mango < 105 || ingredients.condensedMilk < 60 || ingredients.ice < 90 || ingredients.sugar < 24) {
+        if(ingredients.banana.count < 90 || ingredients.mango.count < 105 || ingredients.condensedMilk.count < 60 || ingredients.ice.count < 90 || ingredients.sugar.count < 24) {
           console.log('Sale denied.  Not enough ingredients to make smoothie.');
         }
 
         else {
-          ingredients.banana -= 90;
-          ingredients.mango -= 105;
-          ingredients.condensedMilk -= 60;
-          ingredients.ice -= 90;
-          ingredients.sugar -= 24;
+          ingredients.banana.count -= 90;
+          ingredients.mango.count -= 105;
+          ingredients.condensedMilk.count -= 60;
+          ingredients.ice.count -= 90;
+          ingredients.sugar.count -= 24;
       
           console.log('\n');
           console.log('*_*_*_*_*_* INVENTORY *_*_*_*_*_*', '\n');
-          console.log('You have', ingredients.strawberry, 'grams of STRAWBERRIES left!');
-          console.log('You have', ingredients.banana, 'grams of BANANAS left!');
-          console.log('You have', ingredients.mango, 'grams of MANGOS left!');
-          console.log('You have', ingredients.condensedMilk, 'mL of CONDENSED MILK left!');
-          console.log('You have', ingredients.ice, 'mL of ICE left!');
-          console.log('You have', ingredients.sugar, 'grams of SUGAR left!');
+          console.log('You have', ingredients.strawberry.count, 'grams of STRAWBERRIES left!');
+          console.log('You have', ingredients.banana.count, 'grams of BANANAS left!');
+          console.log('You have', ingredients.mango.count, 'grams of MANGOS left!');
+          console.log('You have', ingredients.condensedMilk.count, 'mL of CONDENSED MILK left!');
+          console.log('You have', ingredients.ice.count, 'mL of ICE left!');
+          console.log('You have', ingredients.sugar.count, 'grams of SUGAR left!');
           console.log('\n');
         }
       }
